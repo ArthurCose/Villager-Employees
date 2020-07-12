@@ -12,7 +12,5 @@ execute as @a at @s if score @s _employee_option matches 4 run function villager
 execute as @a if score @s _employee_option matches 5.. run function villager_employees:player/dispatch_to_employee
 
 # entity updates
-summon minecraft:armor_stand ~ ~ ~ {Tags: ["employee_storage_finder"]}
-execute as @e[type=minecraft:villager,tag=villager_employee] run function villager_employees:villager/tick
 kill @e[tag=employee_storage_finder]
-
+execute as @e[type=minecraft:villager,tag=villager_employee] run function villager_employees:villager/tick
