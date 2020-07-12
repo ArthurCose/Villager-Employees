@@ -1,0 +1,19 @@
+scoreboard objectives remove employees_uuid_0
+scoreboard objectives remove employees_uuid_1
+scoreboard objectives remove employees_uuid_2
+scoreboard objectives remove employees_uuid_3
+
+scoreboard objectives remove employee_uuid_0
+scoreboard objectives remove employee_uuid_1
+scoreboard objectives remove employee_uuid_2
+scoreboard objectives remove employee_uuid_3
+
+scoreboard objectives remove employee_locked
+
+scoreboard objectives remove employee_item_c
+
+scoreboard objectives remove employer_options
+scoreboard objectives remove _employee_option
+
+data remove storage villager_employees:temp comparison
+data remove storage villager_employees:temp payment_item
