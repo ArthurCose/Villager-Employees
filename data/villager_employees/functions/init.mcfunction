@@ -13,6 +13,12 @@ scoreboard objectives add employee_uuid_3 dummy
 scoreboard objectives add employee_locked dummy
 # counting items for stock
 scoreboard objectives add employee_item_c dummy
+# storage
+scoreboard objectives add employee_stock_x dummy
+scoreboard objectives add employee_stock_y dummy
+scoreboard objectives add employee_stock_z dummy
 
 scoreboard objectives add employer_options trigger
 scoreboard objectives add _employee_option trigger
+
+scoreboard players set $1 employee_item_c 1

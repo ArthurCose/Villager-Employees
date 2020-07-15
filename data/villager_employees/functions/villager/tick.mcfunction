@@ -1,5 +1,6 @@
-# summon per entity in case it enters an unloaded chunk
-summon minecraft:armor_stand ~ ~ ~ {Tags: ["employee_storage_finder"], Invisible: true, Invulnerable: true, NoGravity: true, Marker: true}
-execute if data entity @s ArmorItems[0].tag.storage_location run function villager_employees:villager/storage/check_stock
-execute unless data entity @s ArmorItems[0].tag.storage_location run function villager_employees:villager/transactions/prevent_purchases
-kill @e[tag=employee_storage_finder]
+function villager_employees:villager/storage/get_storage_marker
+
+execute if entity @e[type=minecraft:armor_stand,tag=employee_active_storage] run function villager_employees:villager/storage/check_stock
+execute unless entity @e[type=minecraft:armor_stand,tag=employee_active_storage] run function villager_employees:villager/transactions/prevent_purchases
+
+tag @e[type=minecraft:armor_stand,tag=employee_active_storage] remove employee_active_storage

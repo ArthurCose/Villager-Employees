@@ -4,7 +4,7 @@ scoreboard players operation @s _employee_option = @a[tag=employees_executor,lim
 execute if score @s _employee_option matches 5 run function villager_employees:villager/dispatch/trades_menu
 
 # location storage
-execute if score @s _employee_option matches 6 run data modify entity @s ArmorItems[0].tag.storage_location set from entity @a[tag=employees_executor,limit=1] Pos
+execute if score @s _employee_option matches 6 run function villager_employees:villager/dispatch/try_set_storage_location
 execute if score @s _employee_option matches 7 run data modify entity @s ArmorItems[0].tag.proceeds_location set from entity @a[tag=employees_executor,limit=1] Pos
 
 # fired
