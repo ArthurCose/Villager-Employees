@@ -13,7 +13,6 @@ scoreboard objectives remove employee_locked
 scoreboard objectives remove employee_item_c
 
 scoreboard objectives remove employer_options
-scoreboard objectives remove _employee_option
 
 data remove storage villager_employees:temp comparison
 data remove storage villager_employees:temp payment_item
