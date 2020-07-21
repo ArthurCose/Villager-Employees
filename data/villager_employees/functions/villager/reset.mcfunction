@@ -2,7 +2,7 @@
 data modify entity @s VillagerData set from entity @s ArmorItems[0].tag.previous_data.VillagerData
 data remove entity @s Offers.Recipes
 
-data merge entity @s {Tags: [], ArmorItems: [{}, {}, {}, {}], Xp: 0, LastRestock: 0, RestocksToday: 0}
+data merge entity @s {Tags: [], Invulnerable: false, ArmorItems: [{}, {}, {}, {}], Xp: 0, LastRestock: 0, RestocksToday: 0}
 
 # remove storage marker
 function villager_employees:villager/storage/get_storage_marker
