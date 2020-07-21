@@ -19,3 +19,6 @@ scoreboard players set @a employer_options 0
 ## entity updates
 # execute
 execute as @e[type=minecraft:villager,tag=villager_employee] at @s run function villager_employees:villager/tick
+# reset villagers converted into zombies
+# todo: this doesn't fully work as ArmorItems and scores are reset. need to retain data on conversion or reset just before
+execute as @e[type=minecraft:zombie_villager,nbt={Offers:{Recipes:[{buy:{Count:0b}}]}}] run function villager_employees:villager/reset
